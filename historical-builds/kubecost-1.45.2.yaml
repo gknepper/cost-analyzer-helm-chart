@@ -11997,44 +11997,44 @@ data:
       url: http://kubecost-prometheus-server.kubecost.svc.cluster.local
 
 ---
-# Source: cost-analyzer/charts/prometheus/templates/alertmanager-pvc.yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  labels:
-    component: "alertmanager"
-    app: prometheus
-    release: kubecost
-    chart: prometheus-8.15.0
-    heritage: Tiller
-  name: kubecost-prometheus-alertmanager
-spec:
-  accessModes:
-    - ReadWriteOnce
+# # Source: cost-analyzer/charts/prometheus/templates/alertmanager-pvc.yaml
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   labels:
+#     component: "alertmanager"
+#     app: prometheus
+#     release: kubecost
+#     chart: prometheus-8.15.0
+#     heritage: Tiller
+#   name: kubecost-prometheus-alertmanager
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
     
-  resources:
-    requests:
-      storage: "2Gi"
----
-# Source: cost-analyzer/charts/prometheus/templates/pushgateway-pvc.yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  labels:
-    component: "pushgateway"
-    app: prometheus
-    release: kubecost
-    chart: prometheus-8.15.0
-    heritage: Tiller
-  name: kubecost-prometheus-pushgateway
-spec:
-  accessModes:
-    - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: "2Gi"
+# ---
+# # Source: cost-analyzer/charts/prometheus/templates/pushgateway-pvc.yaml
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   labels:
+#     component: "pushgateway"
+#     app: prometheus
+#     release: kubecost
+#     chart: prometheus-8.15.0
+#     heritage: Tiller
+#   name: kubecost-prometheus-pushgateway
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
     
-  resources:
-    requests:
-      storage: "2Gi"
----
+#   resources:
+#     requests:
+#       storage: "2Gi"
+# ---
 # Source: cost-analyzer/charts/prometheus/templates/server-pvc.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
